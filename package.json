@@ -1,11 +1,11 @@
 {
   "name": "wtf_wikipedia",
   "description": "parse wikiscript into json",
-  "version": "0.8.7",
-  "author": "Spencer Kelly <spencermountain@gmail.com> (http://spencermounta.in)",
+  "version": "0.9.0",
+  "author": "Pascal Kraft",
   "repository": {
-    "type": "git",
-    "url": "git://github.com/spencermountain/wtf_wikipedia.git"
+    "type": "https",
+    "url": "https://github.com/PascalKraft/wtf_wikipedia.git"
   },
   "main": "./src/index.js",
   "scripts": {

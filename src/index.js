@@ -3,7 +3,8 @@
 //@spencermountain
 var wtf_wikipedia = (function() {
   var sentence_parser = require('./lib/sentence_parser');
-  var fetch = require('./lib/fetch_text');
+  var fetch_full = require('./lib/fetch_text');
+	var fetch = fetch_full.fetch;
   var make_image = require('./lib/make_image');
   var i18n = require('./data/i18n');
   var helpers = require('./lib/helpers');
@@ -25,6 +26,12 @@ var wtf_wikipedia = (function() {
   var defaultParseOptions = {
     ignoreLists: true
   };
+	
+	var prepare = function(in_protocol, in_base, in_headers ) {
+		fetch.set_headers(in_headers);
+		fetch.set_protocol(in_protocol);
+		fetch.set_base(in_base);
+	};
 
   //some xml elements are just junk, and demand full inglorious death by regular exp
   //other xml elements, like <em>, are plucked out afterwards
